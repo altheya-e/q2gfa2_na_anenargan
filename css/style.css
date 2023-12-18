@@ -1,20 +1,46 @@
+@font-face {
+    font-family: 'spaceboy';
+    src: url(../media/SPACEBOY.TTF);
+}
+
 *{
     padding: 0;
     margin: 0;
 }
 
-body{
+body{   
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    z-index: 1;
+}
+
+#gradient{
+    position: fixed;
     background-image: url(../media/background.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    display: flex;
+    width: 100vw;
+    z-index: 4;
 }
 
 header{
     background-color: aliceblue;
     width: 100vw;
     height: fit-content;
+    z-index: 99;
+    
+}
+
+h1{
+    position: fixed;
+    font-size: 4em;
+    text-align: center;
+    font-family: 'spaceboy';
+    color: white;
+    left: 35%;
+    align-self: center;
     z-index: 99;
 }
 
@@ -37,7 +63,7 @@ header{
     position: fixed;
     align-self: center;
     left: 43%;
-    z-index: 4;
+    z-index: 5;
 }
 
 #mercury{
@@ -50,7 +76,7 @@ header{
     margin-top: 60vh;
     margin-left: 30vh;
     left: 50%;
-    z-index: 4;
+    z-index: 5;
 }
 
 #venus{
@@ -62,7 +88,7 @@ header{
     background-size: cover;
     margin-top: 80vh;
     margin-left: 50vw;
-    z-index: 4;
+    z-index: 5;
 }
 
 #earth{
@@ -74,7 +100,7 @@ header{
     background-size: cover;
     margin-top: 40vh;
     margin-left: 30vw;
-    z-index: 4;
+    z-index: 5;
 }
 
 #mars{
@@ -86,7 +112,7 @@ header{
     background-size: cover;
     margin-top: 6vh;
     margin-left: 50vw;
-    z-index: 3;
+    z-index: 5;
 }
 
 #jupiter{
@@ -98,7 +124,7 @@ header{
     background-size: cover;
     margin-top: 60vh;
     margin-left: 10vw;
-    z-index: 4;
+    z-index: 5;
 }
 
 #saturn{
@@ -110,7 +136,7 @@ header{
     background-size: cover;
     margin-top: -20vh;
     margin-left: 65vw;
-    z-index: 4;
+    z-index: 5;
 }
 
 #uranus{
@@ -121,7 +147,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 10vw;
-    z-index: 4;
+    z-index: 5;
 }
 
 #neptune{
@@ -133,7 +159,7 @@ header{
     background-size: cover;
     margin-top: 70vh;
     margin-left: 80vw;
-    z-index: 4;
+    z-index: 5;
 }
 
 @keyframes rotate { 
@@ -149,8 +175,8 @@ header{
 
 #cover{
     position: fixed;
-    background: linear-gradient(to right, rgba(0,0,0,0.25), rgba(0,0,0,0.5), rgba(0,0,0,0.75), black, rgba(0,0,0,0.75), rgba(0,0,0,0.5), rgba(0,0,0,0.25));
-    height: 40vh;
+    background:	rgba(255,0,0,0.5);
+    height: 100vw;
     width: 20vh;
     z-index: 3;
     animation: move 20s linear infinite;
