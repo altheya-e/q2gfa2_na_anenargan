@@ -13,11 +13,31 @@ body{
     height: 100vh;
     display: flex;
     z-index: 1;
+    
+}
+
+.banner{
+    z-index: 98;
+    position: fixed;
+    display: flex;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    height: 60vh;
+    width: 100vw;
+}
+
+h1{
+    font-size: 4em;
+    text-align: center  ;
+    font-family: 'spaceboy';
+    color: white;
+    text-align: center;
 }
 
 #gradient{
     position: fixed;
-    background-image: url(../media/background.png);
+    background-image: url(../media/gradient.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -33,16 +53,7 @@ header{
     
 }
 
-h1{
-    position: fixed;
-    font-size: 4em;
-    text-align: center;
-    font-family: 'spaceboy';
-    color: white;
-    left: 35%;
-    align-self: center;
-    z-index: 99;
-}
+
 
 #stars{
     position: fixed;
@@ -175,7 +186,7 @@ h1{
 
 #cover{
     position: fixed;
-    background:	rgba(255,0,0,0.5);
+    background: linear-gradient(to right, rgba(0, 0, 0.5), black, rgba(0, 0, 0.5));
     height: 100vw;
     width: 20vh;
     z-index: 3;
@@ -187,7 +198,7 @@ h1{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(100vw);
+        transform: translateX(90vw);
     }
 }
 
