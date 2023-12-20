@@ -30,10 +30,36 @@ body{
 }
 
 h1{
-    font-size: 4em;
+    font-size: 4.3em;
     font-family: 'spaceboy';
     color: white;
     text-align: center;
+    animation: heading 8s;
+}
+
+@keyframes heading {
+    0%{
+        transform: scale(0em);
+        transform: skew(20deg);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes skew {
+    0%{
+        transform: skew(0);
+    }
+    50%{
+        transform: skewX(-30deg);
+    }
+    100%{
+        transform: skewX(30deg);
+    }
 }
 
 #gradient{
@@ -180,17 +206,7 @@ header h2{
     margin-left: 80vw;
     z-index: 5;
 }
-
-@keyframes rotate { 
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
     
-} 
 
 #cover{
     position: fixed;
@@ -219,9 +235,10 @@ header h2{
     width: 25vh;
     position: fixed;
     z-index: 100;
-    align-self: last baseline;
     animation: fly 5s linear forwards;
-    transform-origin: bottom right;
+    bottom: -25vh;
+    left: -25vh;
+    animation-delay: 6s;
 }
 
 #astronaut{
@@ -235,7 +252,7 @@ header h2{
     top: -40vh;
     animation: astronaut 7s linear forwards;
     transform-origin: top right;
-    animation-delay: 5s;
+    animation-delay: 12s;
     z-index: 99;
 }
 
@@ -244,7 +261,7 @@ header h2{
         transform: rotate(45deg);
     }
     100%{
-        transform:  translateY(-100vh) translateX(100vw) rotate(45deg);
+        transform:  translateY(-120vh) translateX(120vw) rotate(45deg);
     }
 }
 
