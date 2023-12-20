@@ -21,15 +21,16 @@ body{
     position: fixed;
     display: flex;
     align-self: center;
-    display: flex;
     align-items: center;
-    height: 60vh;
+    justify-content: center;
+    background-color: 	rgba(0,0,0,0.25);
+    height: max-content;
+    padding: 2vh;
     width: 100vw;
 }
 
 h1{
     font-size: 4em;
-    text-align: center  ;
     font-family: 'spaceboy';
     color: white;
     text-align: center;
@@ -46,11 +47,18 @@ h1{
 }
 
 header{
-    background-color: aliceblue;
     width: 100vw;
     height: fit-content;
     z-index: 99;
-    
+    padding-top: 2vh;
+    background-color: rgba(0,0,0,0.25);
+}
+
+header h2{
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'spaceboy';
 }
 
 
@@ -188,9 +196,10 @@ header{
     position: fixed;
     background: linear-gradient(to right, rgba(0, 0, 0.5), black, rgba(0, 0, 0.5));
     height: 100vw;
-    width: 20vh;
+    width: 5vh;
     z-index: 3;
-    animation: move 20s linear infinite;
+    transform: translateY(-100%);
+    animation: move 40s linear infinite;
 }
 
 @keyframes move{
@@ -200,6 +209,53 @@ header{
     100%{
         transform: translateX(90vw);
     }
+}
+
+#rocket{
+    background-image: url(../media/rocket.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25vh;
+    width: 25vh;
+    position: fixed;
+    z-index: 100;
+    align-self: last baseline;
+    animation: fly 5s linear forwards;
+    transform-origin: bottom right;
+}
+
+#astronaut{
+    position: fixed;
+    background-image: url(../media/astronaut.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    width: 20vh;
+    right: 0vh;
+    top: -40vh;
+    animation: astronaut 7s linear forwards;
+    transform-origin: top right;
+    animation-delay: 5s;
+    z-index: 99;
+}
+
+@keyframes fly {
+    0%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform:  translateY(-100vh) translateX(100vw) rotate(45deg);
+    }
+}
+
+@keyframes astronaut {
+    0%{
+        transform: translateY(0vh);
+    }
+    100%{
+        transform: translateY(150vh);
+    }
+    
 }
 
 
